@@ -5,7 +5,9 @@
 #' @inheritParams make_icon
 #' @export
 #' @examples 
+#' \donttest{
 #' slideshow(geotagged_photo_paths())
+#' }
 slideshow = function(f, delay = 1, geometry = "800x600", repeat_show = FALSE) {
   is_files = methods::is(f, "character")
   if(repeat_show) {

@@ -22,10 +22,13 @@ Imports:
     purrr,
     sf,
     magrittr,
-    utils
+    utils,
+    lubridate,
+    stats
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    bookdown
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

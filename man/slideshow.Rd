@@ -20,5 +20,7 @@ See \code{\link[magick:geometry]{magick::geometry()}} for details.}
 Make a slideshow of photos
 }
 \examples{
+\donttest{
 slideshow(geotagged_photo_paths())
+}
 }
