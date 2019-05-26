@@ -21,7 +21,8 @@ Imports:
     methods,
     purrr,
     sf,
-    magrittr
+    magrittr,
+    utils
 Suggests: 
     knitr,
     rmarkdown
