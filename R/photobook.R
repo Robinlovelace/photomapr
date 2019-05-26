@@ -81,6 +81,13 @@ knitr::include_graphics("', f, '")
 '))
 }
 
+#' Create an index.Rmd file
+#' 
+#' @param photobook_name Name of the book
+#' @param photobook_author Names of the creators
+#' @param photobook_repo github repo, e.g. `"org/repo"``
+#' @param photobook_description Photobook description.
+#' @export
 photobook_index = function(
   photobook_name = "Name of the book",
   photobook_author = "Names of the creators",
