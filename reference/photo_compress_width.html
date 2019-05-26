@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • photomapr</title>
+<title>Compress photos — photo_compress_width • photomapr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Compress photos — photo_compress_width" />
+
+<meta property="og:description" content="Warning: overwrites photos" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -94,126 +97,50 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Compress photos</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Robinlovelace/photomapr/blob/master/R/icons.R'><code>R/icons.R</code></a></small>
+    <div class="hidden name"><code>photo_compress_width.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Warning: <strong>overwrites photos</strong></p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="geotagged_photo_paths.html">geotagged_photo_paths()</a></code> </p>
-        </td>
-        <td><p>Return file paths of small geotagged photos, shipped with package</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="geotagged_photos.html">geotagged_photos</a></code> </p>
-        </td>
-        <td><p>Stats19 schema and variables</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_icon.html">make_icon()</a></code> </p>
-        </td>
-        <td><p>Make a icons from original photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_icons.html">make_icons()</a></code> </p>
-        </td>
-        <td><p>Generate a list of icon images</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_add_captions.html">photo_add_captions()</a></code> </p>
-        </td>
-        <td><p>Add photo captions with preview</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_compress_width.html">photo_compress_width()</a></code> </p>
-        </td>
-        <td><p>Compress photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_group.html">photo_group()</a></code> </p>
-        </td>
-        <td><p>Group photos by time and location</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_iconize.html">photo_iconize()</a></code> </p>
-        </td>
-        <td><p>Save icons of photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_rmd.html">photo_rmd()</a></code> </p>
-        </td>
-        <td><p>Create an RMarkdown document from a series of photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photo_select.html">photo_select()</a></code> </p>
-        </td>
-        <td><p>Helper function to select photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photobook.html">photobook()</a></code> </p>
-        </td>
-        <td><p>Create photobook index</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photobook_index.html">photobook_index()</a></code> </p>
-        </td>
-        <td><p>Create an index.Rmd file</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photomap.html">photomap()</a></code> </p>
-        </td>
-        <td><p>Creates an interactive photomap</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photos_sf.html">photos_sf()</a></code> </p>
-        </td>
-        <td><p>Convert photo filepaths into geographic sf object</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="slideshow.html">slideshow()</a></code> </p>
-        </td>
-        <td><p>Make a slideshow of photos</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>photo_compress_width</span>(<span class='no'>f</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>800</span>, <span class='kw'>quality</span> <span class='kw'>=</span> <span class='fl'>70</span>, <span class='no'>...</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>f</th>
+      <td><p>File path to photo(s).</p></td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td><p>The width of the results; aspect ratio will remain unchanged</p></td>
+    </tr>
+    <tr>
+      <th>quality</th>
+      <td><p>Number from 0 to 100 representing the quality of .jpg images</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Other arguments to pass to <code><a href='https://www.rdocumentation.org/packages/magick/topics/editing'>magick::image_write()</a></code></p></td>
+    </tr>
     </table>
-  </div>
+    
 
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
-    </ul>
+      <li><a href="#arguments">Arguments</a></li>
+                </ul>
+
   </div>
 </div>
 
