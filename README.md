@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/robinlovelace/photomapr.svg?branch=master)](https://travis-ci.org/robinlovelace/photomapr)
 <!-- badges: end -->
 
 The goal of photomapr is to make it easier to create photomaps. A
@@ -16,8 +18,8 @@ A good example of a photomap is that created by default by
 [Flickr](https://www.flickr.com/photos/97888609@N02/sets/72157704719583382/map)
 when an album of geotagged photos has been created. The image below
 shows a publicly available Flickr photomap, showing photos taken during
-a cycling holiday from the rewilding project at the Knepp Estate to
-[Marble
+a cycling holiday from the Knepp Estate rewilding project to Lewes,
+which ended by passing though [Marble
 Arch](https://www.independent.co.uk/environment/climate-change-protest-extinction-rebellion-london-oxford-street-waterloo-a8870206.html)
 in
 London.
@@ -26,9 +28,12 @@ London.
 
 This approach has limitations, however. You must sign-up to Flickr and
 other services that create photomaps ‘in the cloud’, creating a barrier
-to entry. Furthermore creating a photomap online often involves handing
-over your valuable data to a multinational for-profit corporation. That
-is problematic, as outlined in the book Team Human.
+to entry. Furthermore, creating a photomap online often involves sending
+valuable and sometimes highly personal data to corporations. That can be
+problematic, as outlined in the
+[book](https://www.amazon.com/Team-Human-Douglas-Rushkoff/dp/039365169X)
+and [podcast series Team Human](https://teamhuman.fm/) by Douglas
+Rushkoff.
 
 ## Installation
 
