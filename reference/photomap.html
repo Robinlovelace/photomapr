@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • photomapr</title>
+<title>Creates an interactive photomap — photomap • photomapr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Creates an interactive photomap — photomap" />
+
+<meta property="og:description" content="Creates an interactive photomap" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -94,84 +97,60 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Creates an interactive photomap</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Robinlovelace/photomapr/blob/master/R/photomap.R'><code>R/photomap.R</code></a></small>
+    <div class="hidden name"><code>photomap.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Creates an interactive photomap</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="geotagged_photo_paths.html">geotagged_photo_paths()</a></code> </p>
-        </td>
-        <td><p>Return file paths of small geotagged photos, shipped with package</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="geotagged_photos.html">geotagged_photos</a></code> </p>
-        </td>
-        <td><p>Stats19 schema and variables</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_icon.html">make_icon()</a></code> </p>
-        </td>
-        <td><p>Make a icons from original photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="make_icons.html">make_icons()</a></code> </p>
-        </td>
-        <td><p>Generate a list of icon images</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photomap.html">photomap()</a></code> </p>
-        </td>
-        <td><p>Creates an interactive photomap</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="photos_sf.html">photos_sf()</a></code> </p>
-        </td>
-        <td><p>Convert photo filepaths into geographic sf object</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="save_icons.html">save_icons()</a></code> </p>
-        </td>
-        <td><p>Save icons of photos</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="slideshow.html">slideshow()</a></code> </p>
-        </td>
-        <td><p>Make a slideshow of photos</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>photomap</span>(<span class='no'>f</span>, <span class='kw'>icons</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>dir_out</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>(), <span class='kw'>iconWidth</span> <span class='kw'>=</span> <span class='fl'>100</span>,
+  <span class='kw'>iconHeight</span> <span class='kw'>=</span> <span class='fl'>75</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>f</th>
+      <td><p>File path to photo(s).</p></td>
+    </tr>
+    <tr>
+      <th>icons</th>
+      <td><p>File paths to icons of photos</p></td>
+    </tr>
+    <tr>
+      <th>dir_out</th>
+      <td><p>Directory where files should be saved, <code><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir()</a></code> by default</p></td>
+    </tr>
+    <tr>
+      <th>iconWidth</th>
+      <td><p>Width of the photo icon, in pixels</p></td>
+    </tr>
+    <tr>
+      <th>iconHeight</th>
+      <td><p>Height of the photo icon, in pixels</p></td>
+    </tr>
     </table>
-  </div>
+    
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>f</span> <span class='kw'>=</span> <span class='fu'><a href='geotagged_photo_paths.html'>geotagged_photo_paths</a></span>()
+<span class='fu'>photomap</span>(<span class='no'>f</span>)</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+            
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
