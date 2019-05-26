@@ -1,29 +1,35 @@
 Package: photomapr
 Title: Create Maps from Geotagged Photos
 Version: 0.0.1
-Authors@R: c(
-    person("Robin", "Lovelace", email = "rob00x@gmail.com", role = c("aut", "cre"),
-      comment = c(ORCID = "0000-0001-5679-6536"))
-  )
-Description: Package to support the creation of 'photomaps' to interactively explore geotagged photos.
-Depends: R (>= 3.5.0)
+Authors@R: 
+    person(given = "Robin",
+           family = "Lovelace",
+           role = c("aut", "cre"),
+           email = "rob00x@gmail.com",
+           comment = c(ORCID = "0000-0001-5679-6536"))
+Description: Package to support the creation of 'photomaps' to
+    interactively explore geotagged photos.
 License: GPL-3
 URL: https://github.com/Robinlovelace/photomapr
 BugReports: https://github.com/Robinlovelace/photomapr/issues
-Encoding: UTF-8
-LazyData: true
+Depends: 
+    R (>= 3.5.0)
 Imports: 
-    sf,
     exifr,
     leaflet,
     magick,
+    methods,
     purrr,
-    methods
+    sf
 Suggests: 
     knitr,
     rmarkdown
-VignetteBuilder: knitr
-RoxygenNote: 6.1.1
-Roxygen: list(markdown = TRUE)
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
 Language: en-US
-X-schema.org-keywords: stats19, road-safety, transport, car-crashes, ropensci, data
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+X-schema.org-keywords: stats19, road-safety, transport,
+    car-crashes, ropensci, data
