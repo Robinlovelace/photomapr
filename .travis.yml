@@ -2,3 +2,12 @@
 
 language: R
 cache: packages
+
+# from https://github.com/edzer/sf_dep/blob/master/.travis.yml
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo add-apt-repository ppa:ubuntugis/ppa --yes
+  - sudo apt-get --yes --force-yes update -qq
+  - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev

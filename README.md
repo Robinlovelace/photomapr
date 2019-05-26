@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/robinlovelace/photomapr.svg?branch=master)](https://travis-ci.org/robinlovelace/photomapr)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/robinlovelace/photomapr?branch=master&svg=true)](https://ci.appveyor.com/project/robinlovelace/photomapr)
 <!-- badges: end -->
 
 The goal of photomapr is to make it easier to create photomaps. A
