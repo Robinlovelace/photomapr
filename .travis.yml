@@ -52,3 +52,10 @@ before_install:
   - sudo add-apt-repository ppa:ubuntugis/ppa --yes
   - sudo apt-get --yes --force-yes update -qq
   - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev
+
+# from https://pkgdown.r-lib.org/reference/deploy_site_github.html
+before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
+deploy:
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github()'
+  skip_cleanup: true
