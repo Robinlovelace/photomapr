@@ -2,7 +2,7 @@
 #'
 #' `geotagged_photos`is a list of `magick-image` objects, representing
 #' geotagged photos generated with the following command: 
-#' `geotagged_photos = make_logos(geotagged_photo_paths())`.
+#' `geotagged_photos = make_icons(geotagged_photo_paths())`.
 #' 
 #' See the `data-raw` folder in the repo for details.
 #'

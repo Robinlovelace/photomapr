@@ -24,6 +24,9 @@ The goal of photomapr is to make it easier to create photomaps.
 A photomap is an interactive map which shows the location of places where photos have been taken.
 Ideally, photomaps should be able to display the photo of interest when you click on it.
 
+## Why create your own photomaps
+
+Photomaps and photo albums are a great way to share experiences and remember good times.
 A good example of a photomap is that created by default by [Flickr](https://www.flickr.com/photos/97888609@N02/sets/72157704719583382/map) when an album of geotagged photos has been created.
 The image below shows a publicly available Flickr photomap, showing photos taken during a cycling holiday from the Knepp Estate rewilding project to Lewes, which ended by passing though [Marble Arch](https://www.independent.co.uk/environment/climate-change-protest-extinction-rebellion-london-oxford-street-waterloo-a8870206.html) in London.
 
@@ -34,6 +37,8 @@ You must sign-up to Flickr and other services that create photomaps 'in the clou
 Furthermore, creating a photomap online often involves sending valuable and sometimes highly personal data to corporations.
 That can be problematic, as outlined in the [book](https://www.amazon.com/Team-Human-Douglas-Rushkoff/dp/039365169X) and [podcast series Team Human](https://teamhuman.fm/) by Douglas Rushkoff.
 
+This package aims to make it easy to create photomaps locally.
+<!-- and, if you want, deploy the results online. -->
 
 ## Installation
 
@@ -46,22 +51,41 @@ devtools::install_github("robinlovelace/photomapr")
 
 ## Usage
 
-Let's create a simple photomap, using data shipped in the package:
+The first stage is to decide the photos you want.
+The package cannot help you with that, but once you do have a number of photo files, represented by `photo_files` below, you can convert them to a geographic data frame with the function `photos_sf()`:
 
 ```{r example}
 library(photomapr)
 
 (photo_files = geotagged_photo_paths())
-photos_geo = photos_sf(photo_files)
+(photos_geo = photos_sf(photo_files))
 
-plot(photos_geo$geometry)
+plot(photos_geo["DateTimeOriginal"], key.pos = 1)
 ```
 
-You can also preview your photos with a slideshow in RStudio, thanks to [`magick`](https://github.com/ropensci/magick):
+Let's create a simple photomap, using data shipped in the package:
+
+```{r}
+photomap(photo_files)
+```
+
+
+You can also preview your photos with a slideshow in RStudio:
 
 ```{r, eval=FALSE}
 slideshow(photo_files) 
 ```
+
+## How it works
+
+The package works bringing together functionality from a number of excellent packages, including:
+
+- [`magick`](https://github.com/ropensci/magick), which provides powerful tools for image processing
+- [`exifr`](https://github.com/paleolimbot/exifr) for extracting metadata (critically the GPS location) from photos
+- [`sf`](https://github.com/r-spatial/sf) for providing a class system for spatial data
+
+Thanks to the developers of these packages, and to anyone helping make open source software a joy to use.
+Without you this project would be impossible.
 
 ## Next steps
 

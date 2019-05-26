@@ -1,5 +1,5 @@
 #' Convert photo filepaths into geographic sf object
-#' @inheritParams make_logo
+#' @inheritParams make_icon
 #' @export
 #' @examples 
 #' photos_geo = photos_sf(geotagged_photo_paths())

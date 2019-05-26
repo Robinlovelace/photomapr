@@ -19,3 +19,6 @@ See \code{\link[magick:geometry]{magick::geometry()}} for details.}
 \description{
 Make a slideshow of photos
 }
+\examples{
+slideshow(geotagged_photo_paths())
+}

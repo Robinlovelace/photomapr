@@ -7,7 +7,7 @@
 \description{
 \code{geotagged_photos}is a list of \code{magick-image} objects, representing
 geotagged photos generated with the following command:
-\code{geotagged_photos = make_logos(geotagged_photo_paths())}.
+\code{geotagged_photos = make_icons(geotagged_photo_paths())}.
 }
 \details{
 See the \code{data-raw} folder in the repo for details.

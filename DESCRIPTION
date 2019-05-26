@@ -20,7 +20,8 @@ Imports:
     magick,
     methods,
     purrr,
-    sf
+    sf,
+    magrittr
 Suggests: 
     knitr,
     rmarkdown
