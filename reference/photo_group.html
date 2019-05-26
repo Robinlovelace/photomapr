@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Convert photo filepaths into geographic sf object — photos_sf • photomapr</title>
+<title>Group photos by time and location — photo_group • photomapr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,12 @@
 
 
 
-<meta property="og:title" content="Convert photo filepaths into geographic sf object — photos_sf" />
+<meta property="og:title" content="Group photos by time and location — photo_group" />
 
-<meta property="og:description" content="Convert photo filepaths into geographic sf object" />
+<meta property="og:description" content="This function allows you to group photos, by time or a combination of time and location.
+If date_time_cut values are taken (times in which to break the photos)
+time alone will be used to break-up the photos.
+If not, you can simply request a number of breaks with n_groups." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,32 +102,54 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Convert photo filepaths into geographic sf object</h1>
-    <small class="dont-index">Source: <a href='https://github.com/Robinlovelace/photomapr/blob/master/R/photos_sf.R'><code>R/photos_sf.R</code></a></small>
-    <div class="hidden name"><code>photos_sf.Rd</code></div>
+    <h1>Group photos by time and location</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Robinlovelace/photomapr/blob/master/R/photos.R'><code>R/photos.R</code></a></small>
+    <div class="hidden name"><code>photo_group.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Convert photo filepaths into geographic sf object</p>
+    <p>This function allows you to group photos, by time or a combination of time and location.
+If <code>date_time_cut</code> values are taken (times in which to break the photos)
+time alone will be used to break-up the photos.
+If not, you can simply request a number of breaks with <code>n_groups</code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>photos_sf</span>(<span class='no'>f</span>)</pre>
+    <pre class="usage"><span class='fu'>photo_group</span>(<span class='no'>photo</span>, <span class='kw'>n_groups</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>date_time_cut</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>cluster_string</span> <span class='kw'>=</span> <span class='st'>"Latitude$|Longitude$|date_time"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>f</th>
-      <td><p>File path to photo(s).</p></td>
+      <th>photo</th>
+      <td><p>An sf object created by <code>photos_sf</code></p></td>
+    </tr>
+    <tr>
+      <th>n_groups</th>
+      <td><p>The number of groups if <code>date_time_cut</code> is not provided</p></td>
+    </tr>
+    <tr>
+      <th>date_time_cut</th>
+      <td><p>Times provided to break the photos</p></td>
+    </tr>
+    <tr>
+      <th>cluster_string</th>
+      <td><p>Text string used to select variables used for clustering</p></td>
     </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>photos_geo</span> <span class='kw'>=</span> <span class='fu'>photos_sf</span>(<span class='fu'><a href='geotagged_photo_paths.html'>geotagged_photo_paths</a></span>())
-<span class='fu'><a href='https://www.rdocumentation.org/packages/graphics/topics/plot'>plot</a></span>(<span class='no'>photos_geo</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: plotting the first 9 out of 87 attributes; use max.plot = 87 to plot all</span></div><div class='img'><img src='photos_sf-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='no'>f</span> <span class='kw'>=</span> <span class='fu'><a href='geotagged_photo_paths.html'>geotagged_photo_paths</a></span>()
+<span class='no'>photo</span> <span class='kw'>=</span> <span class='fu'><a href='photos_sf.html'>photos_sf</a></span>(<span class='no'>f</span>)
+<span class='fu'>photo_group</span>(<span class='no'>photo</span>, <span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] "1" "1" "2" "2" "2"</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/summary'>summary</a></span>(<span class='no'>photo</span>$<span class='no'>date_time</span>)</div><div class='output co'>#&gt;                  Min.               1st Qu.                Median 
+#&gt; "2019-05-23 12:06:05" "2019-05-23 13:50:34" "2019-05-24 10:45:45" 
+#&gt;                  Mean               3rd Qu.                  Max. 
+#&gt; "2019-05-24 03:59:53" "2019-05-24 11:07:20" "2019-05-24 20:09:45" </div><div class='input'><span class='no'>date_time_cut</span> <span class='kw'>=</span> <span class='kw pkg'>lubridate</span><span class='kw ns'>::</span><span class='fu'><a href='http://lubridate.tidyverse.org/reference/ymd_hms.html'>ymd_hm</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"2019-05-23 00:00"</span>, <span class='st'>"2019-05-24 11:00"</span>, <span class='st'>"2019-05-24 24:00"</span>))
+<span class='no'>photo</span>$<span class='no'>group</span> <span class='kw'>=</span> <span class='fu'>photo_group</span>(<span class='no'>photo</span>, <span class='kw'>date_time_cut</span> <span class='kw'>=</span> <span class='no'>date_time_cut</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/graphics/topics/plot'>plot</a></span>(<span class='no'>photo</span>[<span class='st'>"DateTimeOriginal"</span>], <span class='kw'>pch</span> <span class='kw'>=</span> <span class='no'>photo</span>$<span class='no'>group</span>)</div><div class='img'><img src='photo_group-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
