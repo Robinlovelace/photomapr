@@ -69,51 +69,7 @@ library(photomapr)
 #> [3] "/home/robin/R/x86_64-pc-linux-gnu-library/3.6/photomapr/photos/IMG_20190524_104545_logo.jpg"
 #> [4] "/home/robin/R/x86_64-pc-linux-gnu-library/3.6/photomapr/photos/IMG_20190524_110720_logo.jpg"
 #> [5] "/home/robin/R/x86_64-pc-linux-gnu-library/3.6/photomapr/photos/IMG_20190524_200945_logo.jpg"
-(photos_geo = photos_sf(photo_files))
-#> Simple feature collection with 5 features and 84 fields
-#> geometry type:  POINT
-#> dimension:      XY
-#> bbox:           xmin: -8.115535 ymin: 42.42215 xmax: -7.88984 ymax: 42.66204
-#> epsg (SRID):    4326
-#> proj4string:    +proj=longlat +datum=WGS84 +no_defs
-#> # A tibble: 5 x 85
-#>   SourceFile ExifToolVersion FileName Directory FileSize FileModifyDate
-#>   <chr>                <dbl> <chr>    <chr>        <int> <chr>         
-#> 1 /home/rob…            11.4 IMG_201… /home/ro…    32748 2019:05:26 03…
-#> 2 /home/rob…            11.4 IMG_201… /home/ro…    57089 2019:05:26 03…
-#> 3 /home/rob…            11.4 IMG_201… /home/ro…    34375 2019:05:26 03…
-#> 4 /home/rob…            11.4 IMG_201… /home/ro…    42078 2019:05:26 03…
-#> 5 /home/rob…            11.4 IMG_201… /home/ro…    51643 2019:05:26 03…
-#> # … with 79 more variables: FileAccessDate <chr>,
-#> #   FileInodeChangeDate <chr>, FilePermissions <int>, FileType <chr>,
-#> #   FileTypeExtension <chr>, MIMEType <chr>, JFIFVersion <chr>,
-#> #   ExifByteOrder <chr>, Model <chr>, Software <chr>, Orientation <int>,
-#> #   ModifyDate <chr>, YCbCrPositioning <int>, ISO <int>,
-#> #   ExposureProgram <int>, FNumber <dbl>, ExposureTime <dbl>,
-#> #   SensingMethod <int>, SubSecTimeDigitized <int>,
-#> #   SubSecTimeOriginal <int>, SubSecTime <int>, FocalLength <dbl>,
-#> #   Flash <int>, MeteringMode <int>, SceneCaptureType <int>,
-#> #   InteropIndex <chr>, InteropVersion <chr>,
-#> #   FocalLengthIn35mmFormat <int>, CreateDate <chr>,
-#> #   ExifImageHeight <int>, WhiteBalance <int>, DateTimeOriginal <chr>,
-#> #   BrightnessValue <dbl>, ExifImageWidth <int>, ExposureMode <int>,
-#> #   ApertureValue <dbl>, ComponentsConfiguration <chr>, ColorSpace <int>,
-#> #   SceneType <int>, ShutterSpeedValue <chr>, ExifVersion <chr>,
-#> #   FlashpixVersion <chr>, ResolutionUnit <int>, GPSLatitudeRef <chr>,
-#> #   GPSLongitudeRef <chr>, GPSAltitudeRef <int>, GPSTimeStamp <chr>,
-#> #   GPSProcessingMethod <chr>, GPSDateStamp <chr>, XResolution <int>,
-#> #   YResolution <int>, Make <chr>, ThumbnailOffset <int>,
-#> #   ThumbnailLength <int>, Compression <int>, ImageWidth <int>,
-#> #   ImageHeight <int>, EncodingProcess <int>, BitsPerSample <int>,
-#> #   ColorComponents <int>, YCbCrSubSampling <chr>, Aperture <dbl>,
-#> #   GPSAltitude <dbl>, GPSDateTime <chr>, GPSPosition <chr>,
-#> #   ImageSize <chr>, Megapixels <dbl>, ScaleFactor35efl <dbl>,
-#> #   ShutterSpeed <dbl>, SubSecCreateDate <chr>,
-#> #   SubSecDateTimeOriginal <chr>, SubSecModifyDate <chr>,
-#> #   ThumbnailImage <chr>, CircleOfConfusion <chr>, FOV <dbl>,
-#> #   FocalLength35efl <int>, HyperfocalDistance <dbl>, LightValue <dbl>,
-#> #   geometry <POINT [°]>
-
+photos_geo = photos_sf(photo_files)
 plot(photos_geo["DateTimeOriginal"], key.pos = 1)
 ```
 
@@ -145,11 +101,12 @@ excellent packages, including:
   - [`sf`](https://github.com/r-spatial/sf) for providing a class system
     for spatial data
 
-Thanks to the developers of these packages, and to anyone helping make
-open source software a joy to use. Without you this project would be
+Thanks to the developers of these packages, and to everyone making and
+using open source software. Without you this project would be
 impossible.
 
 ## Next steps
 
-  - Show how to create interactive maps
+  - Clicking on photos in photomap opens photo
   - Auto-generation of photo albums with maps
+  - Deployment of photomaps online?

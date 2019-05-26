@@ -58,8 +58,7 @@ The package cannot help you with that, but once you do have a number of photo fi
 library(photomapr)
 
 (photo_files = geotagged_photo_paths())
-(photos_geo = photos_sf(photo_files))
-
+photos_geo = photos_sf(photo_files)
 plot(photos_geo["DateTimeOriginal"], key.pos = 1)
 ```
 
@@ -84,12 +83,13 @@ The package works bringing together functionality from a number of excellent pac
 - [`exifr`](https://github.com/paleolimbot/exifr) for extracting metadata (critically the GPS location) from photos
 - [`sf`](https://github.com/r-spatial/sf) for providing a class system for spatial data
 
-Thanks to the developers of these packages, and to anyone helping make open source software a joy to use.
+Thanks to the developers of these packages, and to everyone making and using open source software.
 Without you this project would be impossible.
 
 ## Next steps
 
-- Show how to create interactive maps
+- Clicking on photos in photomap opens photo
 - Auto-generation of photo albums with maps
+- Deployment of photomaps online?
 
 
