@@ -3,7 +3,7 @@
 #' @param iconWidth Width of the photo icon, in pixels
 #' @param iconHeight Height of the photo icon, in pixels
 #' @param icons File paths to icons of photos
-#' @inheritParams save_icons
+#' @inheritParams photo_iconize
 #' @export
 #' @examples 
 #' f = geotagged_photo_paths()
@@ -12,7 +12,7 @@ photomap = function(f, icons = NULL, dir_out = tempdir(), iconWidth = 100, iconH
   photos_geo = photos_sf(f)
   geometry = paste0(iconWidth, "x", iconHeight)
   if(is.null(icons)) {
-    f_icon = save_icons(f = f, geometry = geometry, dir_out = dir_out)
+    f_icon = photo_iconize(f = f, geometry = geometry, dir_out = dir_out)
   }
   
   photo_icons = leaflet::makeIcon(iconUrl = f_icon, iconWidth = iconWidth, iconHeight = iconHeight,   iconAnchorX = 22, iconAnchorY = 94)

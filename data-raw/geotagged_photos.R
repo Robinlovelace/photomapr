@@ -7,7 +7,7 @@ f = sort(f)
 f[5] = "/home/robin/Pictures/2019/05/24/IMG_20190524_200945.jpg"
 slideshow(f) # check the photos are good
 
-f_small = save_icons(f, dir_out = "inst/photos/", format = "jpg", quality = 50)
+f_small = photo_iconize(f, dir_out = "inst/photos/", format = "jpg", quality = 50)
 file.size(f_small) / 1e6
 
 slideshow(f_small) # check the quality

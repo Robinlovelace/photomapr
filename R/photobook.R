@@ -4,7 +4,7 @@
 #' @param index A character string produced by `photobook_index`
 #' @inheritParams photo_group
 #' @inheritParams photo_rmd
-#' @inheritParams save_icons
+#' @inheritParams photo_iconize
 #' @export
 #' @examples 
 #' f = geotagged_photo_paths()
@@ -113,7 +113,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ````
 
-# Welcome
+# Welcome {-}
 '
   )
 }
