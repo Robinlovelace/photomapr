@@ -110,7 +110,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>photobook</span>(<span class='no'>photo</span>, <span class='kw'>index</span> <span class='kw'>=</span> <span class='fu'>photobook_index</span>(), <span class='kw'>groups</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>photobook</span>(<span class='no'>photo</span>, <span class='kw'>index</span> <span class='kw'>=</span> <span class='fu'><a href='photobook_index.html'>photobook_index</a></span>(), <span class='kw'>groups</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>n_groups</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>captions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>dir_out</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -147,7 +147,7 @@
     <pre class="examples"><div class='input'><span class='no'>f</span> <span class='kw'>=</span> <span class='fu'><a href='geotagged_photo_paths.html'>geotagged_photo_paths</a></span>()
 
 <span class='no'>photo</span> <span class='kw'>=</span> <span class='fu'><a href='photos_sf.html'>photos_sf</a></span>(<span class='no'>f</span>)
-<span class='fu'>photobook</span>(<span class='no'>photo</span>)</div><div class='output co'>#&gt; <span class='message'>Saving index as /tmp/RtmpgYFc9h/index.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Copying photos to /tmp/RtmpgYFc9h</span></div><div class='output co'>#&gt; <span class='message'>Saving group 1 as /tmp/RtmpgYFc9h/1.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Saving group 2 as /tmp/RtmpgYFc9h/2.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Saving group 3 as /tmp/RtmpgYFc9h/3.Rmd</span></div><div class='input'><span class='co'># file.edit(file.path(tempdir(), "index.Rmd"))</span>
+<span class='fu'>photobook</span>(<span class='no'>photo</span>)</div><div class='output co'>#&gt; <span class='message'>Saving index as /tmp/RtmpVL54ia/index.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Copying photos to /tmp/RtmpVL54ia</span></div><div class='output co'>#&gt; <span class='message'>Saving group 1 as /tmp/RtmpVL54ia/1.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Saving group 2 as /tmp/RtmpVL54ia/2.Rmd</span></div><div class='output co'>#&gt; <span class='message'>Saving group 3 as /tmp/RtmpVL54ia/3.Rmd</span></div><div class='input'><span class='co'># file.edit(file.path(tempdir(), "index.Rmd"))</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/getwd'>setwd</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>())
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list.files'>list.files</a></span>()</div><div class='output co'>#&gt;  [1] "1.Rmd"                        "2.Rmd"                       
 #&gt;  [3] "3.Rmd"                        "images"                      
@@ -247,8 +247,8 @@
 #&gt;   |                                                                         |.................................................................| 100%
 #&gt;   ordinary text without R code
 #&gt; 
-#&gt; </div><div class='output co'>#&gt; <span class='message'>output file: _main.knit.md</span></div><div class='output co'>#&gt; /usr/bin/pandoc +RTS -K512m -RTS _main.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output _main.html --email-obfuscation none --wrap preserve --standalone --section-divs --table-of-contents --toc-depth 3 --template /home/travis/R/Library/bookdown/templates/gitbook.html --highlight-style pygments --number-sections --include-in-header /tmp/RtmpgYFc9h/rmarkdown-str716a2c92c33.html --mathjax </div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Output created: _book/index.html</span></div><div class='output co'>#&gt; [1] "/tmp/RtmpgYFc9h/_book/index.html"</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/browseURL'>browseURL</a></span>(<span class='st'>"_book/index.html"</span>)</div></pre>
+#&gt; </div><div class='output co'>#&gt; <span class='message'>output file: _main.knit.md</span></div><div class='output co'>#&gt; /usr/bin/pandoc +RTS -K512m -RTS _main.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output _main.html --email-obfuscation none --wrap preserve --standalone --section-divs --table-of-contents --toc-depth 3 --template /home/travis/R/Library/bookdown/templates/gitbook.html --highlight-style pygments --number-sections --include-in-header /tmp/RtmpVL54ia/rmarkdown-str6dc82abf277a.html --mathjax </div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Output created: _book/index.html</span></div><div class='output co'>#&gt; [1] "/tmp/RtmpVL54ia/_book/index.html"</div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/browseURL'>browseURL</a></span>(<span class='st'>"_book/index.html"</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
