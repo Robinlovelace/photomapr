@@ -41,7 +41,7 @@ This package aims to make it easy to create photomaps locally
 and, if you want, deploy the results online.
 An example of photomaps is [bookdown.org/robinlovelace/madrid-santiago-2019](https://bookdown.org/robinlovelace/madrid-santiago-2019/), a photomap developed using an early version of this package, a screenshot of which is shown below (see [here](https://github.com/katyrobin/madrid-santiago-2019) to see how the package was used to create this photobook containing photomaps).
 
-[![](man/figures/photobook-salamanca.png)](bookdown.org/robinlovelace/madrid-santiago-2019)
+[![](man/figures/photobook-salamanca.png)](https://bookdown.org/robinlovelace/madrid-santiago-2019/)
 
 ## Installation
 
@@ -82,7 +82,8 @@ slideshow(photo_files)
 
 The package works bringing together functionality from a number of excellent packages, including:
 
-- [`magick`](https://github.com/ropensci/magick), which provides powerful tools for image processing
+- [`leaflet`](https://github.com/rstudio/leaflet) for interactive maps
+- [`magick`](https://github.com/ropensci/magick) which provides powerful tools for image processing
 - [`exifr`](https://github.com/paleolimbot/exifr) for extracting metadata (critically the GPS location) from photos
 - [`sf`](https://github.com/r-spatial/sf) for providing a class system for spatial data
 
