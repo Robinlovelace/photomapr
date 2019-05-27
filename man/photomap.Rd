@@ -5,7 +5,7 @@
 \title{Creates an interactive photomap}
 \usage{
 photomap(f, icons = NULL, dir_out = tempdir(), iconWidth = 100,
-  iconHeight = 75)
+  iconHeight = 75, maxZoom = 18)
 }
 \arguments{
 \item{f}{File path to photo(s).}
@@ -17,6 +17,8 @@ photomap(f, icons = NULL, dir_out = tempdir(), iconWidth = 100,
 \item{iconWidth}{Width of the photo icon, in pixels}
 
 \item{iconHeight}{Height of the photo icon, in pixels}
+
+\item{maxZoom}{The maximum zoom level allowed in the photomap}
 }
 \description{
 Creates an interactive photomap
@@ -24,4 +26,5 @@ Creates an interactive photomap
 \examples{
 f = geotagged_photo_paths()
 photomap(f)
+photomap(f, maxZoom = 8)
 }
