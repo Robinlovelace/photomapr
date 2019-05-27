@@ -16,7 +16,7 @@ photomap is an interactive map which shows the location of places where
 photos have been taken. Ideally, photomaps should be able to display the
 photo of interest when you click on it.
 
-## Why create your own photomaps
+## Why create your own photomaps?
 
 Photomaps and photo albums are a great way to share experiences and
 remember good times. A good example of a photomap is that created by
@@ -41,8 +41,16 @@ problematic, as outlined in the
 and [podcast series Team Human](https://teamhuman.fm/) by Douglas
 Rushkoff.
 
-This package aims to make it easy to create photomaps locally.
-<!-- and, if you want, deploy the results online. -->
+This package aims to make it easy to create photomaps locally and, if
+you want, deploy the results online. An example of photomaps is
+[bookdown.org/robinlovelace/madrid-santiago-2019](https://bookdown.org/robinlovelace/madrid-santiago-2019/),
+a photomap developed using an early version of this package, a
+screenshot of which is shown below (see
+[here](https://github.com/katyrobin/madrid-santiago-2019) to see how the
+package was used to create this photobook containing
+photomaps).
+
+[![](man/figures/photobook-salamanca.png)](bookdown.org/robinlovelace/madrid-santiago-2019)
 
 ## Installation
 
