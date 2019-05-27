@@ -111,7 +111,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>photomap</span>(<span class='no'>f</span>, <span class='kw'>icons</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>dir_out</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/tempfile'>tempdir</a></span>(), <span class='kw'>iconWidth</span> <span class='kw'>=</span> <span class='fl'>100</span>,
-  <span class='kw'>iconHeight</span> <span class='kw'>=</span> <span class='fl'>75</span>)</pre>
+  <span class='kw'>iconHeight</span> <span class='kw'>=</span> <span class='fl'>75</span>, <span class='kw'>maxZoom</span> <span class='kw'>=</span> <span class='fl'>18</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -136,12 +136,17 @@
       <th>iconHeight</th>
       <td><p>Height of the photo icon, in pixels</p></td>
     </tr>
+    <tr>
+      <th>maxZoom</th>
+      <td><p>The maximum zoom level allowed in the photomap</p></td>
+    </tr>
     </table>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>f</span> <span class='kw'>=</span> <span class='fu'><a href='geotagged_photo_paths.html'>geotagged_photo_paths</a></span>()
-<span class='fu'>photomap</span>(<span class='no'>f</span>)</div></pre>
+<span class='fu'>photomap</span>(<span class='no'>f</span>)
+<span class='fu'>photomap</span>(<span class='no'>f</span>, <span class='kw'>maxZoom</span> <span class='kw'>=</span> <span class='fl'>8</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
