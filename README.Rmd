@@ -67,7 +67,7 @@ plot(photos_geo["DateTimeOriginal"], key.pos = 1)
 
 Let's create a simple photomap, using data shipped in the package:
 
-```{r}
+```{r, eval=FALSE}
 photomap(photo_files)
 ```
 
@@ -89,6 +89,47 @@ The package works bringing together functionality from a number of excellent pac
 
 Thanks to the developers of these packages, and to everyone making and using open source software.
 Without you this project would be impossible.
+
+## Example workflow
+
+<details>
+
+```{r, eval=FALSE}
+library(tidyverse)
+photos_zip = "/media/robin/T7/ColwallHerefordshire/Colwallgeotaggedimages.zip"
+photos_path = gsub(pattern = ".zip", replacement = "", x = photos_zip)
+dir.create(photos_path)
+unzip(zipfile = photos_zip, exdir = photos_path)
+list.files(photos_path)
+photos_path = file.path("/media/robin/T7/ColwallHerefordshire/Colwallgeotaggedimages/mPix12Oct/")
+list.files(photos_path)
+photos_files = list.files(photos_path, full.names = TRUE)
+p_sf = photos_sf(photos_files)
+photos_to_keep = 1:9
+p_sf_test = p_sf |> 
+  slice(photos_to_keep) |> 
+  transmute(file = basename(path = SourceFile)) |> 
+  mutate(file = paste0('<a href="', file, '">', file, '</a>'))
+
+dir.create("testphotofolder")
+file.copy(from = photos_files[photos_to_keep], to = "testphotofolder")
+f = list.files("testphotofolder", full.names = TRUE)
+library(leaflet)
+l = leaflet() |> 
+  addTiles() |> 
+  addMarkers(data = p_sf_test, popup = p_sf_test$file)
+l
+htmlwidgets::saveWidget(widget = l, file = "testphotofolder/index.html")
+browseURL("testphotofolder/index.html")
+p_sf_test
+system("zip -r testphotofolder.zip testphotofolder")
+piggyback::pb_upload("testphotofolder.zip")
+piggyback::pb_download_url("testphotofolder.zip")
+```
+
+
+</details>
+
 
 ## Next steps
 
